@@ -1,4 +1,4 @@
-firebaseInit.js 
+./src/firebaseInit.js 
 # Logs
 logs
 *.log
