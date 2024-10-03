@@ -11,10 +11,11 @@ const AlbumForm = ({ addAlbum }) => {
             title: newAlbumName.current.value,
             images: []
         })
-        clearNewAlbumInput();
+        clearNewAlbumInput(e);
 
     }
-    const clearNewAlbumInput = () => {
+    const clearNewAlbumInput = (e) => {
+        e.preventDefault();
         newAlbumName.current.value = ""
     }
 

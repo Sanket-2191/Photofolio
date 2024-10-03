@@ -1,6 +1,6 @@
 import Album from "../Album/Album";
 
-const AlbumList = ({ Albums, updateAlbum, deleteAlbum }) => {
+const AlbumList = ({ Albums, updateAlbum, deleteAlbum, setCurrentAlbumIndex }) => {
 
     // let Albums = ["album", "album", "album", "album"];
 
@@ -12,7 +12,9 @@ const AlbumList = ({ Albums, updateAlbum, deleteAlbum }) => {
             p-1 box-content bg-slate-500">
                 {
                     Albums.map((a, i) =>
-                        <Album key={i} album={a} updateAlbum={updateAlbum} deleteAlbum={deleteAlbum} />
+                        <Album key={i} album={a} updateAlbum={updateAlbum} deleteAlbum={deleteAlbum}
+                            setCurrentAlbumIndex={setCurrentAlbumIndex}
+                            index={i} />
                     )
                 }
                 {/* <Album /> */}

@@ -71,9 +71,13 @@ function App() {
     <>
 
       {/* <ToastContainer> */}
-      <Navbar setAlbumFormVisible={setAlbumFormVisible} albumFormVisible={albumFormVisible} currentAlbumIndex={currentAlbumIndex} />
+      <Navbar setAlbumFormVisible={setAlbumFormVisible} albumFormVisible={albumFormVisible} currentAlbumIndex={currentAlbumIndex}
+      />
       {albumFormVisible ? <AlbumForm addAlbum={addAlbum} /> : null}
-      {currentAlbumIndex >= 0 ? <ImageList album={albums[currentAlbumIndex]} updateAlbum={updateAlbum} /> : <AlbumList Albums={albums} deleteAlbum={deleteAlbum} updateAlbum={updateAlbum} />}
+      {currentAlbumIndex >= 0 ? <ImageList album={albums[currentAlbumIndex]}
+        setCurrentAlbumIndex={setCurrentAlbumIndex} updateAlbum={updateAlbum} /> :
+        <AlbumList Albums={albums} setCurrentAlbumIndex={setCurrentAlbumIndex}
+          deleteAlbum={deleteAlbum} updateAlbum={updateAlbum} />}
       {/* </ToastContainer> */}
 
 
